@@ -9,24 +9,20 @@ public class PersonaFacade {
 	List<Person> personaLista;
 	
 	Person person = new Person();
+
+
 	
 	
-	private static int MIN_AGE = 20;
-	private static int MAX_AGE = 30;
-
-
-	public void startEngine() {
-
-	    person.setAge(MIN_AGE);
-	    personaLista.add(person);
+	public List<Person> getListPersons(){
+		
+	    if(person.getAge() >= 20 && person.getAge() <= 30) {
+	    	
+	    	personaLista.add(person);
+	    	
+	    }
+	       
+		return personaLista;
+		
 	}
-
-	public void stopEngine() {
-
-	    person.setAge(MAX_AGE);
-	    personaLista.add(person);
-
-	}
-
 }
 
