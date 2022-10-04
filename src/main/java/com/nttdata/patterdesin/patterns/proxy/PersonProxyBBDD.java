@@ -7,11 +7,11 @@ public class PersonProxyBBDD extends AbstractPersonProxy {
 	}
 
 	public  void before() {
-		System.out.println("Abro conexion con BBDD...");
+		System.out.println("Abrir conexion con BBDD...");
 	}
 
 	public  void after() {
-		System.out.println("Cierro conexion BBDD...");
+		System.out.println("Cerrar conexion BBDD...");
 	}
 
 }

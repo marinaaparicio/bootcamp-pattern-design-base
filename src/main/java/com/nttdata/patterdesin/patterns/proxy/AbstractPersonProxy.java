@@ -1,16 +1,16 @@
 package com.nttdata.patterdesin.patterns.proxy;
 
 public abstract class AbstractPersonProxy implements PersonaProxyInterface {
-	private PersonaProxyInterface person;
+	private PersonaProxyInterface persona;
 
-	public AbstractPersonProxy(PersonaProxyInterface person) {
-		this.person = person;
+	public AbstractPersonProxy(PersonaProxyInterface persona) {
+		this.persona = persona;
 	}
 
 	@Override
 	public void operacion() {
 		before();
-		person.operacion();
+		persona.operacion();
 		after();
 	}
 

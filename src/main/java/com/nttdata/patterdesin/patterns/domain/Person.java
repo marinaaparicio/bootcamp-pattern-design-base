@@ -1,8 +1,9 @@
 package com.nttdata.patterdesin.patterns.domain;
 
 import com.nttdata.patterdesin.patterns.decorator.PersonInterface;
+import com.nttdata.patterdesin.patterns.proxy.PersonaProxyInterface;
 
-public class Person implements PersonInterface, Cloneable{
+public class Person implements PersonInterface, Cloneable, PersonaProxyInterface{
 
     private String name;
 
@@ -76,5 +77,11 @@ public class Person implements PersonInterface, Cloneable{
 		public Person build() {
 			return new Person(this);
 		}
+	}
+
+	@Override
+	public void operacion() {
+		System.out.println("Ejecutar persona: " + name + ", " + age);
+		
 	}
 }
